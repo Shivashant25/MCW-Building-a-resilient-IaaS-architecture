@@ -174,13 +174,12 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
     - **Performance**: Standard
     - **Account kind**: StorageV2 (general purpose v2)
     - **Replication**: Zone-redundant storage (ZRS)
-    - **Access tier (default)**: Hot
 
-    ![Fields in the Create storage account blade are set to the previously defined settings.](images/ha-storage.png "Create storage account blade")
+    ![Fields in the Create storage account blade are set to the previously defined settings.](images/ha-storage-new.png "Create storage account blade")
 
 3.  Switch to the **Advanced** tab. Change the **Minimum TLS version** to **Version 1.0**. Then select **Review + Create**, followed by **Create**.
 
-    ![The 'Advanced' tab of the Create storage account blade shows the minimum TLS version as 1.2](images/ha-tls.png)
+    ![The 'Advanced' tab of the Create storage account blade shows the minimum TLS version as 1.2](images/ha-tls-new.png)
 
     > **Note:** To promote use of the latest and most secure standards, by default Azure storage accounts require TLS version 1.2. This storage account will be used as a Cloud Witness for our SQL Server cluster. SQL Server requires TLS version 1.0 for the Cloud Witness.
 
