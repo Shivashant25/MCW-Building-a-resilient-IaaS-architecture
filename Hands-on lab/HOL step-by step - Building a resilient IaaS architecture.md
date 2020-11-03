@@ -789,19 +789,18 @@ Custom scripts in Azure Automation are called by Azure Site recovery to add the 
 
     ![In the ASR blade, Getting Started is highlighted. Under For On-Premises Machines and Azure VMs, Step 1: Replicate Application is selected.](images/dr-asr-1-new.png "Step 1 selected")
 
-3. On **Step 1 - Source** select the following inputs and then select **OK**:
+3. On **Step 1 - Source** select the following inputs and then select **Next**:
 
-    - **Source**: Azure
     - **Source Location**: Central US *(Your Primary region)*
     - **Azure virtual machine deployment model**: Resource Manager
     - **Source resource group**: ContosoRG1
     - **Disaster Recovery between Availability Zones?**: No (this option is for DR between availability zones *within* a region)
 
-    ![In the Source blade, fields are set to the previously defined settings.](images/dr-asr-2.png "Source blade")
+    ![In the Source blade, fields are set to the previously defined settings.](images/dr-asr-2-new.png "Source blade")
 
-4. On **Step 2 - Virtual Machines**, select **WebVM1** and **WebVM2** and then select **OK**.
+4. On **Step 2 - Virtual Machines**, select **WebVM1** and **WebVM2** and then select **Next**.
 
-    ![In the Select virtual machines blade, the check boxes for WebVM1 and WebVM2 are selected.](images/dr-asr-3.png "Select virtual machines blade")
+    ![In the Select virtual machines blade, the check boxes for WebVM1 and WebVM2 are selected.](images/dr-asr-3-new.png "Select virtual machines blade")
 
 5. On the **Customize target settings** blade, select the **Target location** as **East US 2** (your secondary site Azure region). Then, in the 'Resource group, Network, Storage and Availability' section, select **Customize**.
 
