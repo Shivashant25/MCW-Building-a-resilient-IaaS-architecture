@@ -785,9 +785,9 @@ Custom scripts in Azure Automation are called by Azure Site recovery to add the 
 
 1. From the Azure portal on **LABVM**, open the **BCDRRSV** Recovery Services Vault located in the **ContosoRG2** resource group.
 
-2. Under **Getting Started**, select **Site Recovery**.  Next, select **Step 1: Replicate Application** in the **For On-Premises Machines and Azure VMs** section. 
+2. Under **Getting Started**, select **Site Recovery**.  Next, select **Step 1: Enable Replication** under the **Azure virtual machines** section. 
 
-    ![In the ASR blade, Getting Started is highlighted. Under For On-Premises Machines and Azure VMs, Step 1: Replicate Application is selected.](images/dr-asr-1.png "Step 1 selected")
+    ![In the ASR blade, Getting Started is highlighted. Under For On-Premises Machines and Azure VMs, Step 1: Replicate Application is selected.](images/dr-asr-1-new.png "Step 1 selected")
 
 3. On **Step 1 - Source** select the following inputs and then select **OK**:
 
