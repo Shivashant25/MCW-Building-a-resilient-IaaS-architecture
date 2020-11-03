@@ -1383,9 +1383,8 @@ In this task, you will validate the backup for the Contoso application WebVMs. Y
     -   **Performance:** Standard
     -   **Account kind:** StorageV2 (general purpose v2)
     -   **Replication:** Locally-redundant storage (LRS)
-    -   **Access tier:** Hot
 
-    ![Screenshot showing the 'Create storage account' blade in the Azure portal.](images/v-bk-web3.png "Create storage account")
+    ![Screenshot showing the 'Create storage account' blade in the Azure portal.](images/v-bk-web3-new.png "Create storage account")
 
 7.  Before restoring a VM, the existing VM must be shut down. Use the Azure portal to shut down **WebVM1**.
 
