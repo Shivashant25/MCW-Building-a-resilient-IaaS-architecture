@@ -825,11 +825,7 @@ Custom scripts in Azure Automation are called by Azure Site recovery to add the 
 
     ![The Extension settings show the existing Automation Account has been selected.](images/dr-asr-7.png "Extension settings")
 
-9. Next, select **Create target resources**.
-
-    ![Screenshot of the Create target resources button.](images/image232.png "Create target resources button")
-
-10. Wait for the validation to complete and resources to be created, then select **Enable replication**.
+9. Next, select **Enable replication**.
 
     ![Screenshot of the Enable replication button.](images/image233.png "Enable replication button")
 
