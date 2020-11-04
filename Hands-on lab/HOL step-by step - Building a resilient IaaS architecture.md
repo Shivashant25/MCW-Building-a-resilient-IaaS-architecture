@@ -118,9 +118,9 @@ A template will be used to save time. You will configure each tier in subsequent
 
     - Resource Group: **ContosoRG1** (existing)
 
-    Select the checkbox to agree to the terms and conditions, then select **Purchase**.
+    Select **Review + Create**, followed by **Create**.
 
-    ![The custom deployment screen with ContosoRG1 as the resource group.](images/ha-deploy.png "Custom deployment")
+    ![The custom deployment screen with ContosoRG1 as the resource group.](images/ha-deploy-new.png "Custom deployment")
 
 3.  While you wait for the HA resources to deploy, take some time review the template contents. You can review the template by navigating to the **ContosoRG1** resource group, selecting **Deployments** in the resource group left-nav, selecting any of the deployments, followed by **template**.
 
@@ -174,13 +174,12 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
     - **Performance**: Standard
     - **Account kind**: StorageV2 (general purpose v2)
     - **Replication**: Zone-redundant storage (ZRS)
-    - **Access tier (default)**: Hot
 
-    ![Fields in the Create storage account blade are set to the previously defined settings.](images/ha-storage.png "Create storage account blade")
+    ![Fields in the Create storage account blade are set to the previously defined settings.](images/ha-storage-new.png "Create storage account blade")
 
 3.  Switch to the **Advanced** tab. Change the **Minimum TLS version** to **Version 1.0**. Then select **Review + Create**, followed by **Create**.
 
-    ![The 'Advanced' tab of the Create storage account blade shows the minimum TLS version as 1.2](images/ha-tls.png)
+    ![The 'Advanced' tab of the Create storage account blade shows the minimum TLS version as 1.2](images/ha-tls-new.png)
 
     > **Note:** To promote use of the latest and most secure standards, by default Azure storage accounts require TLS version 1.2. This storage account will be used as a Cloud Witness for our SQL Server cluster. SQL Server requires TLS version 1.0 for the Cloud Witness.
 
@@ -206,7 +205,7 @@ In this task, you will build a Windows Failover Cluster and configure SQL Always
     
     > **Note:** When using Azure Bastion to connect to a VM using domain credentials, the username must be specified in the format `user@domain-fqdn`, and **not** in the format `domain\user`.
 
-    ![Azure portal showing connection to SQLVM1 using Bastion.](images/ha-sqlvm1-bastion.png "Azure Bastion")
+  ![Azure portal showing connection to SQLVM1 using Bastion.](images/ha-sqlvm1-bastion.png "Azure Bastion")
    
 
 8.  On **SQLVM1**, select **Start** and then choose **Windows PowerShell ISE**.
@@ -786,23 +785,22 @@ Custom scripts in Azure Automation are called by Azure Site recovery to add the 
 
 1. From the Azure portal on **LABVM**, open the **BCDRRSV** Recovery Services Vault located in the **ContosoRG2** resource group.
 
-2. Under **Getting Started**, select **Site Recovery**.  Next, select **Step 1: Replicate Application** in the **For On-Premises Machines and Azure VMs** section. 
+2. Under **Getting Started**, select **Site Recovery**.  Next, select **Step 1: Enable Replication** under the **Azure virtual machines** section. 
 
-    ![In the ASR blade, Getting Started is highlighted. Under For On-Premises Machines and Azure VMs, Step 1: Replicate Application is selected.](images/dr-asr-1.png "Step 1 selected")
+    ![In the ASR blade, Getting Started is highlighted. Under For On-Premises Machines and Azure VMs, Step 1: Replicate Application is selected.](images/dr-asr-1-new.png "Step 1 selected")
 
-3. On **Step 1 - Source** select the following inputs and then select **OK**:
+3. On **Step 1 - Source** select the following inputs and then select **Next**:
 
-    - **Source**: Azure
     - **Source Location**: Central US *(Your Primary region)*
     - **Azure virtual machine deployment model**: Resource Manager
     - **Source resource group**: ContosoRG1
     - **Disaster Recovery between Availability Zones?**: No (this option is for DR between availability zones *within* a region)
 
-    ![In the Source blade, fields are set to the previously defined settings.](images/dr-asr-2.png "Source blade")
+    ![In the Source blade, fields are set to the previously defined settings.](images/dr-asr-2-new.png "Source blade")
 
-4. On **Step 2 - Virtual Machines**, select **WebVM1** and **WebVM2** and then select **OK**.
+4. On **Step 2 - Virtual Machines**, select **WebVM1** and **WebVM2** and then select **Next**.
 
-    ![In the Select virtual machines blade, the check boxes for WebVM1 and WebVM2 are selected.](images/dr-asr-3.png "Select virtual machines blade")
+    ![In the Select virtual machines blade, the check boxes for WebVM1 and WebVM2 are selected.](images/dr-asr-3-new.png "Select virtual machines blade")
 
 5. On the **Customize target settings** blade, select the **Target location** as **East US 2** (your secondary site Azure region). Then, in the 'Resource group, Network, Storage and Availability' section, select **Customize**.
 
@@ -827,11 +825,7 @@ Custom scripts in Azure Automation are called by Azure Site recovery to add the 
 
     ![The Extension settings show the existing Automation Account has been selected.](images/dr-asr-7.png "Extension settings")
 
-9. Next, select **Create target resources**.
-
-    ![Screenshot of the Create target resources button.](images/image232.png "Create target resources button")
-
-10. Wait for the validation to complete and resources to be created, then select **Enable replication**.
+9. Next, select **Enable replication**.
 
     ![Screenshot of the Enable replication button.](images/image233.png "Enable replication button")
 
@@ -839,9 +833,9 @@ Custom scripts in Azure Automation are called by Azure Site recovery to add the 
 
     ![A message is displayed indicating Enabling replication for two vm(s) has successfully completed.](images/image234.png "Enabling replication for two vm(s)")
 
-12. The **BCDRRSV** blade should still have the **Site Recovery** option (under 'Getting started') selected. Select **Step 2: Manage Recovery Plans**.
+12. The **BCDRRSV** blade should still have the **Site Recovery** option (under 'Getting started') selected. Select **Step 2: Manage Recovery Plans** under **Azure virtual machines section**.
 
-    ![Click path to Manage Recovery Plans.](images/dr-asr-8.png "Manage Recovery Plans")
+    ![Click path to Manage Recovery Plans.](images/dr-asr-8-new.png "Manage Recovery Plans")
 
 13. Select **+Recovery plan**.
 
@@ -1014,7 +1008,7 @@ Azure Backup and Azure Site Recovery are implemented using the same Azure resour
 
 5.  Still in the BackupRSV Properties blade, under **Security Settings**, select **Update**. Under Soft Delete, select **Disabled**, then **Save** your changes and close the Security Settings panel.
 
-    ![Azure portal screenshot showing the backup properties blade of the Recovery Services Vault.](images/bk-config1.png "Recovery Services Vault backup properties")
+    ![Azure portal screenshot showing the backup properties blade of the Recovery Services Vault.](images/bk-config1-new.png "Recovery Services Vault backup properties")
 
     > **Note:** In a production environment, you should leave Soft Delete enabled. However, for this lab, it is better to disable this feature, since leaving it enabled makes it more difficult to clean up your lab resources once the lab is complete.
 
@@ -1389,9 +1383,8 @@ In this task, you will validate the backup for the Contoso application WebVMs. Y
     -   **Performance:** Standard
     -   **Account kind:** StorageV2 (general purpose v2)
     -   **Replication:** Locally-redundant storage (LRS)
-    -   **Access tier:** Hot
 
-    ![Screenshot showing the 'Create storage account' blade in the Azure portal.](images/v-bk-web3.png "Create storage account")
+    ![Screenshot showing the 'Create storage account' blade in the Azure portal.](images/v-bk-web3-new.png "Create storage account")
 
 7.  Before restoring a VM, the existing VM must be shut down. Use the Azure portal to shut down **WebVM1**.
 
