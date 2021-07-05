@@ -1,4 +1,4 @@
-![Microsoft Cloud Workshops](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/master/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
+![Microsoft Cloud Workshops](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/main/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
 
 <div class="MCWHeader1">
 Building a resilient IaaS architecture
@@ -9,7 +9,7 @@ Before the hands-on lab setup guide
 </div>
 
 <div class="MCWHeader3">
-June 2020
+November 2020
 </div>
 
 
@@ -63,9 +63,9 @@ In this task, you will use an Azure Resource Manager template to deploy the LabV
   
     - Location: **Choose a location close to you**.
 
-    Select the checkbox to agree to the terms and conditions, then select **Purchase**.
+    Select **Review + Create** and then **Create** to deploy the resources.
 
-    ![Screenshot of the Azure portal showing the custom template deployment settings for the LabVM.](images/BeforeTheHOL/labvm-deploy.png "Screenshot of the Azure portal showing the custom template deployment settings for the LabVM")
+    ![Screenshot of the Azure portal showing the custom template deployment settings for the LabVM.](images/BeforeTheHOL/labvm-deploy1.png "Screenshot of the Azure portal showing the custom template deployment settings for the LabVM")
 
     You should proceed to the next task **without** waiting for the deployment to complete. This saves time.
 
@@ -82,9 +82,9 @@ In this task, you will use an Azure Resource Manager template to deploy the Cont
     - Resource Group: **(Create new) ContosoRG1**
     - Location: **Central US**
 
-    Select the checkbox to agree to the terms and conditions, then select **Purchase**.
+    Select **Review + Create** and then **Create** to deploy the resources.
 
-    ![The custom deployment screen with ContosoRG1 as the resource group and Central US as the region.](images/BeforeTheHOL/contoso-deploy.png "Custom deployment")
+    ![The custom deployment screen with ContosoRG1 as the resource group and Central US as the region.](images/BeforeTheHOL/contoso-deploy1.png "Custom deployment")
     
 
 ### Task 3: Wait for deployments to complete, and validate
@@ -97,9 +97,11 @@ In this task, you will verify that the LabVM and Contoso sample application have
 
 2.  You can check the Contoso application deployment status by navigating to the **ContosoRG1** resource group, selecting **Deployments** in the resource group left-nav, and checking the status of the deployments. Make sure the deployment status is **Succeeded** for all templates before proceeding to the hands-on lab guide.
 
-    ![Screenshot of the Azure portal showing the template deployment status 'Succeeded' for each template.](images/BeforeTheHOL/contoso-success.png "Screenshot of the Azure portal showing the template deployment status Succeeded for each template")
+    ![Screenshot of the Azure portal showing the template deployment status 'Succeeded' for each template.](images/BeforeTheHOL/contoso-success1.png "Screenshot of the Azure portal showing the template deployment status Succeeded for each template")
 
-3.  Once the Contoso application deployment is successful, validate the application by opening the **WebVM1** virtual machine and navigating your browser to its public IP address.
+3.  Once the Contoso application deployment is successful, validate the application by opening the **WebVM1** virtual machine, copying the public IP address, and navigating your browser to enter its public IP address.
+
+    ![Go to WebVM1 in the resource group, locate the public IP address, and copy it into your web browser](images/BeforeTheHOL/contoso-webvmpubip.png "Copy WebVM1 public IP address")
 
     ![The Contoso application window displays, showing a button for 'Current Policy Offerings](images/BeforeTheHOL/contoso-app.png "Contoso application")
 
