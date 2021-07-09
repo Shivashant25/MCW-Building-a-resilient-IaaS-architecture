@@ -435,7 +435,7 @@ In this task, you will configure a high-availability web tier. This comprises tw
     - **Username**: `demouser@contoso.com`
     - **Password**: `Demo!pass123`
 
-2.  In **WebVM1**, open Windows Explorer, navigate to **C:\inetpub\wwwroot** and open the **Web.config** file using Notepad.
+2.  In **WebVM1**, open File Explorer, navigate to **C:\inetpub\wwwroot** and open the **Web.config** file using Notepad.
 
 3.  In the **Web.config** file, locate the **\<ConnectionStrings\>** element and replace **SQLVM1** with **BCDRAOG** in the data source. Remember to **Save** the file.
 
@@ -891,7 +891,7 @@ Custom scripts in Azure Automation are called by Azure Site recovery to add the 
 
 23. Return to the Recovery Services Vault **BCDRRSV** blade and select the **Replicated Items** link under **Protected Items**. You should see **WebVM1** and **WebVM2**. The Replication Health should be **Healthy**. The Status will show the replication progress. Once both VMs show status **Protected**, replication is complete and you will be able to test the failover.
 
-    ![Under Replicated Items, the status for WebVM1 is 97% Synchronized and WebVM2 is now Protected.](images/dr-as-18.png "Replicated Items")
+    ![Under Replicated Items, the status for WebVM1 is 97% Synchronized and WebVM2 is now Protected.](https://github.com/CloudLabs-MCW/MCW-Building-a-resilient-IaaS-architecture/blob/stage/Hands-on%20lab/images/dr-asr-18.png?raw=true "Replicated Items")
 
     > **Note**: It can take up to 30 minutes for the replication to complete.
 
